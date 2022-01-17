@@ -11,23 +11,23 @@
 		$(function(){
 
 			$.ajax({
-				url:"./class_609.json",
+				url:"./유치원현황.json",
 				dataType:"json",
 				success: function(data){
 					if(data.length > 0){
 						var tb = $('<table border="1">');
 
 						for(var i in data){
-							var $id = data[i].id;
-							var $name = data[i].name;
-							var $gender = data[i].gender;
-							var $team = data[i].team;
+							var $FACLT_NM = data[i].FACLT_NM;
+							var $FOUND_DIV_NM = data[i].FOUND_DIV_NM;
+							var $TELNO = data[i].TELNO;
+							var $REFINE_LOTNO_ADDR = data[i].REFINE_LOTNO_ADDR;
 
 							var row = $("<tr>").append(
-								$("<td>").text($id),
-								$("<td>").text($name),
-								$("<td>").text($gender),
-								$("<td>").text($team),		
+								$("<td>").text($FACLT_NM),
+								$("<td>").text($FOUND_DIV_NM),
+								$("<td>").text($TELNO),
+								$("<td>").text($REFINE_LOTNO_ADDR),		
 							);
 							tb.append(row);
 						}
