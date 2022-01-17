@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<style>
+		table{border: 1px solid black;}
 		table tr:nth-child(2n){background-color: lightgray;}
 	</style>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
@@ -15,7 +16,7 @@
 				dataType:"json",
 				success: function(data){
 					if(data.length > 0){
-						var tb = $('<table border="1,solid,black">');
+						var tb = $('<table border="1">');
 
 						for(var i in data){
 							var $FACLT_NM = data[i].FACLT_NM;
